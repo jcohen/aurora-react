@@ -1,8 +1,32 @@
-<html>
+<!doctype html>
+<html lang='en'>
   <head>
+    <meta charset='utf-8'>
+    <meta name='google' value='notranslate'>
+    <link rel='icon' href='images/aurora.png' type='image/png'/>
+    <link href='css/bootstrap.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='css/app.css'/>
+    <title>Aurora</title>
   </head>
   <body>
-    <div id='root'></div>
-    <script src="/static/bundle.js"></script>
+
+    <nav class="navbar navbar-static-top header" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="/scheduler"><img class="logo" src="images/aurora_logo.png"/></a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/updates">updates</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id='root' class='container-fluid'>
+    </div>
+
   </body>
+  <script src="/static/bundle.js"></script>
 </html>
