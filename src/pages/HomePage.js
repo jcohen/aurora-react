@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 export default class HomePage extends Component {
   render() {
     return (
-      <h2>Welcome to Aurora!</h2>
+      <Breadcrumbs />
     );
   }
 }
