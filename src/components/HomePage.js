@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 import Breadcrumbs from '../components/Breadcrumbs';
+import Header from '../components/Header';
 import RoleActions from '../actions/RoleActions';
 import RoleStore from '../stores/RoleStore';
 
@@ -66,6 +67,7 @@ class HomePage extends Component {
     return (
       <div>
         <Breadcrumbs />
+        <Header title='Scheduled Jobs Summary' />
         <AllRoles {...this.props} />
       </div>
     );
