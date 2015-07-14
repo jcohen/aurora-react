@@ -16,11 +16,14 @@ class BreadcrumbItem {
       return false;
     }
 
-    let cssClass;
     if (!nextItem) {
-      return <li className='active'>{title + ': ' + item}</li>
+      return (
+        <li className='active'>{title + ': ' + item}</li>
+      );
     } else {
-      return <li><Link to={href}>{title + ': ' + item}</Link></li>
+      return (
+        <li><Link to={href}>{title + ': ' + item}</Link></li>
+      );
     }
   }
 }
@@ -34,7 +37,7 @@ export default class Breadcrumbs {
   }
 
   render() {
-    const { role, environment, job, } = this.props;
+    const { role, environment, job } = this.props;
 
     return (
       <div className='row'>

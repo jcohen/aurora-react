@@ -10,7 +10,7 @@ class RolePage extends Component {
   static propTypes = {
     params: PropTypes.shape({
       role: PropTypes.string.isRequired
-    }).isRequired,
+    }).isRequired
   }
 
   render() {

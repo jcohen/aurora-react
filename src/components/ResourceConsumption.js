@@ -35,7 +35,7 @@ export default class ResourceConsumption {
   static propTypes = {
     nonProductionUtilization: resources.isRequired,
     productionUtilization: resources.isRequired,
-    quota: resources.isRequired,
+    quota: resources.isRequired
   };
 
   render() {

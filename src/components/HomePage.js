@@ -1,5 +1,5 @@
 import connectToStores from 'alt/utils/connectToStores';
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
 import Breadcrumbs from './Breadcrumbs';
@@ -8,19 +8,22 @@ import RoleActions from '../actions/RoleActions';
 import RoleStore from '../stores/RoleStore';
 
 class AllRoles extends Component {
-  render() {
-    if (this.props.errorMessage) {
-      return (
-        <div>{this.props.errorMessage}</div>
-      );
-    }
+  static propTypes = {
+    loading: PropTypes.bool.isRequired,
+    roles: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      jobs: PropTypes.number.isRequired,
+      crons: PropTypes.number.isRequired
+    })).isRequired
+  };
 
+  render() {
     if (this.props.loading) {
       return (
         <div>
           <img src='/images/spinner.gif' />
         </div>
-      )
+      );
     }
 
     return (
@@ -47,7 +50,6 @@ class AllRoles extends Component {
     );
   }
 }
-
 
 @connectToStores
 class HomePage extends Component {

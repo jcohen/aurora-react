@@ -1,6 +1,5 @@
 import alt from '../alt';
 import RoleActions from '../actions/RoleActions';
-import SchedulerSource from '../sources/SchedulerSource';
 
 class RoleStore {
   constructor() {

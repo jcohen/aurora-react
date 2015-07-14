@@ -7,8 +7,8 @@ export default class Header {
 
   render() {
     return (
-      <div className="page-header">
-        <h2 className="text-center">{this.props.children}</h2>
+      <div className='page-header'>
+        <h2 className='text-center'>{this.props.children}</h2>
       </div>
     );
   }

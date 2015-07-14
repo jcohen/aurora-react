@@ -1,0 +1,17 @@
+{
+  // babel parser to support ES features
+  "parser": "babel-eslint",
+  // based on https://github.com/feross/standard
+  "extends": [ "standard", "standard-react" ],
+  "env": {
+    "mocha": true
+  },
+  // overrides of the standard style
+  "rules": {
+    "curly": [2, "all"],
+    "max-len": [2, 100, 4],
+    "semi": [2, "always"],
+    "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
+    "wrap-iife": [2, "outside"]
+  }
+}
