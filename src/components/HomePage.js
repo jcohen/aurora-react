@@ -2,8 +2,8 @@ import connectToStores from 'alt/utils/connectToStores';
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-import Breadcrumbs from '../components/Breadcrumbs';
-import Header from '../components/Header';
+import Breadcrumbs from './Breadcrumbs';
+import Header from './Header';
 import RoleActions from '../actions/RoleActions';
 import RoleStore from '../stores/RoleStore';
 
@@ -67,7 +67,7 @@ class HomePage extends Component {
     return (
       <div>
         <Breadcrumbs />
-        <Header title='Scheduled Jobs Summary' />
+        <Header>Scheduled Jobs Summary</Header>
         <AllRoles {...this.props} />
       </div>
     );
