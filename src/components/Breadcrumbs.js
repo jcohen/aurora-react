@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 class BreadcrumbItem {
   static propTypes = {
-    item: PropTypes.string.isRequired,
+    item: PropTypes.string,
     nextItem: PropTypes.string,
     title: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired

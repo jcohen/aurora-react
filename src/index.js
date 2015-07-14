@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Router, { HistoryLocation, Route, RouteHandler } from 'react-router';
-import HomePage from './pages/HomePage'
+import HomePage from './components/HomePage'
 
 const routes =  (
   <Route handler={Aurora}>
-    <Route name="home" path="/" handler={HomePage} />
+    <Route name='home' path='/' handler={HomePage}>
+      <Route name='role' path='/:role' handler={HomePage} />
+    </Route>
   </Route>
 );
 
