@@ -19,6 +19,10 @@ class RoleStore {
   isUpdatingRoles() {
     this.setState({ loading: true });
   }
+
+  failedUpdatingRoles() {
+    // TODO(jcohen): Handle errors here.
+  }
 }
 
 export default alt.createStore(RoleStore, 'RoleStore');

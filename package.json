@@ -37,5 +37,9 @@
     "react-hot-loader": "^1.2.8",
     "webpack": "^1.10.1",
     "webpack-dev-server": "^1.10.1"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/jcohen/aurora-react.git"
   }
 }

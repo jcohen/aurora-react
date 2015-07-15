@@ -16,13 +16,15 @@ class BreadcrumbItem {
       return false;
     }
 
+    const content = title + ': ' + item;
+
     if (!nextItem) {
       return (
-        <li className='active'>{title + ': ' + item}</li>
+        <li className='active'>{content}</li>
       );
     } else {
       return (
-        <li><Link to={href}>{title + ': ' + item}</Link></li>
+        <li><Link to={href}>{content}</Link></li>
       );
     }
   }

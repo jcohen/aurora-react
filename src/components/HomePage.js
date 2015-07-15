@@ -7,15 +7,17 @@ import Header from './Header';
 import RoleActions from '../actions/RoleActions';
 import RoleStore from '../stores/RoleStore';
 
+const rolesPropTypes = {
+  loading: PropTypes.bool.isRequired,
+  roles: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    jobs: PropTypes.number.isRequired,
+    crons: PropTypes.number.isRequired
+  })).isRequired
+};
+
 class AllRoles extends Component {
-  static propTypes = {
-    loading: PropTypes.bool.isRequired,
-    roles: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      jobs: PropTypes.number.isRequired,
-      crons: PropTypes.number.isRequired
-    })).isRequired
-  };
+  static propTypes = rolesPropTypes;
 
   render() {
     if (this.props.loading) {
@@ -39,7 +41,7 @@ class AllRoles extends Component {
           {this.props.roles.map((role, i) => {
             return (
               <tr key={i}>
-                <td><Link to='role' params={{'role': role.name}}>{role.name}</Link> </td>
+                <td><Link to='role' params={{'role': role.name}}>{role.name}</Link></td>
                 <td>{role.jobs}</td>
                 <td>{role.crons}</td>
               </tr>
@@ -53,6 +55,8 @@ class AllRoles extends Component {
 
 @connectToStores
 class HomePage extends Component {
+  static propTypes = rolesPropTypes;
+
   static getStores() {
     return [RoleStore];
   }

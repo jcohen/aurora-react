@@ -9,6 +9,8 @@ class RoleActions {
   fetchRoles() {
     this.actions.isUpdatingRoles();
 
+    // TODO(jcohen): Ideally when a request fails we'd pass some relevant info along when we
+    // dispatch the failure action below.
     SchedulerSource.getRoleSummary().then(
         (roles) => this.actions.updatedRoles(roles),
         () => this.actions.failedUpdatingRoles());

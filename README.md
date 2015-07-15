@@ -9,6 +9,8 @@ single page where we render data.
 
 ## Basic Operation
 
+The app requires node.js v0.12.x to run.
+
 ### Installing dependencies.
 
 ```shell
